@@ -1,0 +1,214 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-image: url("images/snow.png");
+}
+
+p {
+	margin: 2%;
+	text-align: justify;
+}
+
+aside, section, footer {
+	border: 1px solid #274046;
+	border-radius: 10px;
+	background-color: rgba(230,218,218,0.5);
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 10px auto;	
+}
+
+header, article {
+	margin: auto;
+	min-width: 320px;
+	max-width: 900px;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	animation: transBg 10s infinite;
+	animation-timing-function: ease-in-out;
+	position: relative;
+}
+
+@keyframes transBg {
+	0% {background-color:#e6dada;}
+	50% {background-color: #274046;}
+	100% {background-color:#e6dada;}
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10px;
+	animation: transh1 10s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes transh1 {
+	0% {color:black}
+	50% {color:white;}
+	100% {color:black;}
+}
+
+#desk-nav {
+	border-radius: 10px;
+	width: 100%;
+	justify-content: space-around;
+	display: inline-flex;
+	position: absolute;
+	bottom: 5px;
+}
+
+/*nav bar link styling*/
+#desk-nav a {
+	border: 1px solid black;
+	width:120px;
+	height:20px;
+	margin: 2px 0px;
+	text-align: center;
+	align-self: flex-end;
+	text-decoration: none;
+	border-radius: 10px;
+	animation: transButton 10s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+/*button animation*/
+@keyframes transButton {
+	0% {background-color: #274046; color:white; border-color:white;}
+	50% {background-color: #e6dada;color:black;border-color:black}
+	100% {background-color: #274046;color:white;border-color:white}
+}
+
+/*styling flex child contact bubbles*/
+.bubbles { 
+	width: 30%;
+	min-width: 30px;
+	max-width: 50px;
+	align-self: center;
+}
+
+/*animation for profile photo*/
+@keyframes radiance {  
+    0% {box-shadow: 0 0 15px #e6dada;} 
+    50% {box-shadow: 0 0 45px red;} 
+    100% {box-shadow: 0 0 15px #e6dada;} 
+  	}
+
+/* styling grid gallery */
+#gridflex {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	justify-content: center;
+}
+
+.gridchild {
+	opacity: 0.7;
+	width: 30%;
+	min-width: 100px;
+	margin:1%;
+}
+
+/*so that image doesn't overflow*/
+#gridflex a img {
+	width: 100%;
+}
+
+#gridflex a:hover {
+	opacity: 1.0;
+}
+
+/* -------------- for desktop -----------------*/
+@media(min-width: 767px) {
+
+	#main-container {
+		width: 68%;
+		box-sizing: border-box;
+		float:right;
+		margin-left: 2%;
+	}
+
+	/*sidebar design start only in desktop mode*/
+	aside {
+		width: 30%;
+		box-sizing: border-box;
+		float: left;
+		position: sticky;
+		top: 10px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+
+	#sidebarProfile {
+		width: 80%;
+		border-radius:50%;
+		margin: 10px auto;
+		animation: radiance 5s infinite;
+	}
+
+	.sidebarContent {
+		width: 90%;
+		height: auto;
+	}
+
+	#contactBubbles {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	/* so that bubbles does not overflow */
+	#contactBubbles a img {
+		width: 100%;
+	}
+	
+	/* killing profile photo and contact in about us during web view*/
+	.showMobile {
+		display: none;
+	}
+}
+
+/* ------------------------- for mobile---------------------*/
+@media(max-width:767px) {
+	/*kill sidebar*/
+	aside {
+		display: none;
+	}
+
+	/*show about profile*/
+	.showMobile {
+		display: block;
+	}
+
+	#mobileProfile {
+		float: left;
+		width: 25%;
+		border-radius: 15%;
+		margin: 2%;
+		animation: radiance 5s infinite;
+	}
+
+	#begText {
+		float: left;
+		width: 66%;
+	}
+
+	#mobileContact {
+		clear: both;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: space-around;
+		width: 90%;
+	}
+
+	#mobileContact a img {
+		width: 100%;
+	}
+}
+

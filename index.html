@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title> Portfolio for CSS Layout Option 2 </title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+	<header>
+		<h1>! hire / adopt me ! </h1>
+		<nav id="desk-nav">
+				<a href="#about">About Me</a>
+				<a href="#expertise">My Expertise</a>
+				<a href="#gallery">Past Projects</a>
+		</nav>
+	</header>
+
+	<article>
+		<!-- dissapears during mobile view -->
+		<aside>
+			<img id="sidebarProfile" src="images/catprofile.jpg" />
+			<p class="sidebarContent">
+				The fade in/out background above doesn't seem to be practical in real life but it's still fun to know the capabilities of CSS ;D
+				<br/>
+				<br/>
+				Oh... and this sidebar will dissapear during mobile mode but it's content is still somewhere in the page :)
+				<br/>
+				<br/>
+				If you would like to <em>hire my services</em> or to simply <em>adopt</em> me. <strong>Please contact me!!!</strong>
+			</p>
+			<div class="sidebarContent" id="contactBubbles">
+				<a class="bubbles" target="blank" href="https://www.facebook.com/"><img src="images/logofacebook.png" /><a>
+				<a class="bubbles" target="blank" href="https://twitter.com/"><img src="images/logotwitter.png"/><a>
+				<a class="bubbles" target="blank" href="https://www.youtube.com/"><img src="images/logoyoutube.png"/><a>
+				<a class="bubbles" href="mailto:kliwaru@gmail.com?Subject=Interested%20to%20know%20more"><img src="images/logomail.png"/><a>
+			</div>
+		</aside>
+
+		<div id="main-container">
+			<section id="about">
+				<h2>About Me</h2>
+				
+				<p>
+					<em> This is an assignment for NextAcademy Front End Web Development class for <strong> lesson css layout assignment option 1</strong>.</em>
+				</p>
+				<p>
+					The assignment fulfills the following conditions:
+					<ol>
+						<li> Has a navigation bar </li>
+						<li> Has a side bar</li>
+						<li> Has a footer</li>
+						<li> Has a grid of images / elements</li>
+						<li> Mobile/Web view compatible with transition at <strong>768px width</strong> so that it's view friendly at ipad size and above</li>
+					</ol>
+				</p>
+
+				<p>
+					The header background, nav bar buttons, nav bar text and profile photo animation were done with well timed CSS animation background-color changes & border-shadow colors.
+				</p>
+
+				<p>
+					The sidebar profile photo is always in a perfect circle as the image itself and border-radius is describe in % of its parent element.
+				</p>
+
+				<p>
+					The side bar elements, contact me bubbles and gallery were done using the flex box method. 
+				</p>
+
+				<p>
+					The dissapearing sidebar during mobile view and appearing of content in the about me section during mobile view - which dissapear/reappear during web view vise versa was done using display: hide and otherwise.
+				</p>
+
+				<img id="mobileProfile" class="showMobile" src="images/catprofile.jpg" />
+
+				<p id="begText" class="showMobile">
+				If you would like to <em>hire my services</em> or to simply <em>adopt</em> me. <strong>Please contact me!!!</strong>
+				</p>
+
+				<div id="mobileContact" class="showMobile">
+					<a class="bubbles" target="blank" href="https://www.facebook.com/"><img src="images/logofacebook.png"/><a>
+					<a class="bubbles" target="blank" href="https://twitter.com/"><img src="images/logotwitter.png"/><a>
+					<a class="bubbles" target="blank" href="https://www.youtube.com/"><img src="images/logoyoutube.png"/><a>
+					<a class="bubbles" href="mailto:kliwaru@gmail.com?Subject=Interested%20to%20know%20more""><img src="images/logomail.png"/><a>
+				</div>
+				<div style="clear:both"></div>
+
+			</section>
+
+			<section id="expertise">
+				<h2>My Expertise</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</section>
+
+			<section id="gallery">
+				<h2>Portfolio</h2>
+				<p>
+					My other talents!
+				</p>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+
+				<div id="gridflex">
+					<a class="gridchild" href="images/Photo01.jpg" target="blank"> <img src="images/Photo01.jpg" /> </a>
+					<a class="gridchild" href="images/Photo02.jpg" target="blank"> <img src="images/Photo02.jpg" /> </a>
+					<a class="gridchild" href="images/Photo03.jpg" target="blank"> <img src="images/Photo03.jpg" /> </a>
+					<a class="gridchild" href="images/Photo04.jpg" target="blank"> <img src="images/Photo04.jpg" /> </a>
+					<a class="gridchild" href="images/Photo05.jpg" target="blank"> <img src="images/Photo05.jpg" /> </a>
+					<a class="gridchild" href="images/Photo06.jpg" target="blank"> <img src="images/Photo06.jpg" /> </a>
+					<a class="gridchild" href="images/Photo07.jpg" target="blank"> <img src="images/Photo07.jpg" /> </a>
+					<a class="gridchild" href="images/Photo08.jpg" target="blank"> <img src="images/Photo08.jpg" /> </a>
+					<a class="gridchild" href="images/Photo09.jpg" target="blank"> <img src="images/Photo09.jpg" /> </a>
+				</div>
+
+
+			</section>
+
+			<footer >
+				<p>
+					Copyright &copy Leon Lim.
+				</p>
+			</footer>
+		</div>
+		
+		<!-- tricking float -->
+		<div style="clear:both;"></div>
+	
+
+
+	</article>
+
+</body>
+</html>
