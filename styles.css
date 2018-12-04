@@ -171,6 +171,10 @@ h1 {
 	.showMobile {
 		display: none;
 	}
+
+	.showVideo {
+		display: block;
+	}
 }
 
 /* ------------------------- for mobile---------------------*/
@@ -209,6 +213,10 @@ h1 {
 
 	#mobileContact a img {
 		width: 100%;
+	}
+
+	.showVideo {
+		display: none;
 	}
 }
 
